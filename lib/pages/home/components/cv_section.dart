@@ -1,34 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/design_process.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
+import 'dart:html' as html;
+
+String cvUrl =
+    "https://drive.google.com/file/d/1uYtH7Fdis7iYDNkfwlA3bpg0reiPXKtu/view?usp=sharing";
+String profileUrl =
+    "https://docs.google.com/presentation/d/15sNQrBbKHHPSCdofciya0XGESFcn3ONBk8V1qfaWB0o/edit#slide=id.p";
 
 final List<DesignProcess> designProcesses = [
   DesignProcess(
-    title: "DESIGN",
-    imagePath: "assets/design.png",
+    title: "Web Language",
+    icon: FontAwesome.code,
     subtitle:
-        "A full stack allround designer thay may or may not include a guide for specific creative",
+        "HTML/CSS, SASS, React/NodeJS/Typescript, etc. MVC pattern and REST/GraphQL architecture.",
   ),
   DesignProcess(
-    title: "DEVELOP",
-    imagePath: "assets/develop.png",
+    title: "Database Tool",
+    icon: FontAwesome.database,
     subtitle:
-        "A full stack allround developer thay may or may not include a guide for specific creative",
+        "MySQL, PostgreSQL. Familiar with NoSQL database such as MongoDB, Couchbase and Firebase.",
   ),
   DesignProcess(
-    title: "WRITE",
-    imagePath: "assets/write.png",
+    title: "Mobile Tool",
+    icon: FontAwesome.mobile,
     subtitle:
-        "A full stack allround writer thay may or may not include a guide for specific creative",
+        "Familiar with Cross-platform technologies such as Flutter/Dart and familiar with Ionic 3.",
   ),
   DesignProcess(
-    title: "PROMOTE",
-    imagePath: "assets/promote.png",
+    title: "CSS Framework",
+    icon: FontAwesome.css3,
     subtitle:
-        "A full stack allround promoter thay may or may not include a guide for specific creative",
+        "Familiar with CSS frameworks such as Ant Design, Material UI, CoreUI, Tailwind CSS, etc.",
   ),
 ];
 
@@ -69,21 +76,34 @@ class CvSection extends StatelessWidget {
                 onTap: () {},
                 child: MouseRegion(
                   cursor: SystemMouseCursors.click,
-                  child: Text(
-                    "DOWNLOAD CV",
-                    style: TextStyle(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
                       color: kPrimaryColor,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 16.0,
+                    ),
+                    height: 48.0,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 28.0,
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        html.window.open(cvUrl, 'Download CV');
+                      },
+                      child: Text(
+                        "DOWNLOAD CV",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 16.0,
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
             ],
           ),
-          SizedBox(
-            height: 50.0,
-          ),
+          SizedBox(height: 50.0),
           Container(
             child: LayoutBuilder(
               builder: (_context, constraints) {
@@ -101,7 +121,7 @@ class CvSection extends StatelessWidget {
                         : 250.0,
                     // Hack to adjust child height
                     childAspectRatio: ScreenHelper.isDesktop(context)
-                        ? 1
+                        ? 1.2
                         : MediaQuery.of(context).size.aspectRatio * 1.5,
                   ),
                   itemBuilder: (BuildContext context, int index) {
@@ -110,11 +130,11 @@ class CvSection extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Image.asset(
-                                designProcesses[index].imagePath,
-                                width: 40.0,
+                              Icon(
+                                designProcesses[index].icon,
+                                size: 32,
+                                color: kPrimaryColor,
                               ),
                               SizedBox(
                                 width: 15.0,
@@ -129,9 +149,7 @@ class CvSection extends StatelessWidget {
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
+                          SizedBox(height: 15.0),
                           Text(
                             designProcesses[index].subtitle,
                             style: TextStyle(
@@ -148,7 +166,36 @@ class CvSection extends StatelessWidget {
                 );
               },
             ),
-          )
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  border: Border.all(width: 1.0, color: kPrimaryColor),
+                ),
+                height: 48.0,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    html.window.open(profileUrl, 'Engineer Profile');
+                  },
+                  child: Text(
+                    "Learn more",
+                    style: TextStyle(
+                      color: kPrimaryColor,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 14.0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

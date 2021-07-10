@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class DesignProcess {
   final String title;
-  final String imagePath;
+  final IconData icon;
   final String subtitle;
 
   DesignProcess({
     required this.title,
-    required this.imagePath,
+    required this.icon,
     required this.subtitle,
   });
 }
