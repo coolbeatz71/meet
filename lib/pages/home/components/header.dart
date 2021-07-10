@@ -10,10 +10,10 @@ import 'package:meet/utils/screen_helper.dart';
 
 List<HeaderItem> headerItems = [
   HeaderItem(
-    title: "Home",
+    title: "Intro",
     onTap: () {},
   ),
-  HeaderItem(title: "Intro", onTap: () {}),
+  HeaderItem(title: "Backgrounds", onTap: () {}),
   HeaderItem(title: "Projects", onTap: () {}),
   HeaderItem(title: "Experiences", onTap: () {}),
   HeaderItem(title: "Skills", onTap: () {}),
