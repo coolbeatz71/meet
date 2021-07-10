@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:meet/models/carousel_item_model.dart';
 import 'package:meet/utils/constants.dart';
 
@@ -15,7 +14,7 @@ List<CarouselItemModel> carouselItems = List.generate(
         children: [
           Text(
             "PRODUCT DESIGNER",
-            style: GoogleFonts.oswald(
+            style: TextStyle(
               color: kPrimaryColor,
               fontWeight: FontWeight.w900,
               fontSize: 16.0,
@@ -26,7 +25,7 @@ List<CarouselItemModel> carouselItems = List.generate(
           ),
           Text(
             "MICHELE\nHARRINGTON",
-            style: GoogleFonts.oswald(
+            style: TextStyle(
               color: Colors.white,
               fontSize: 40.0,
               fontWeight: FontWeight.w900,

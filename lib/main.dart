@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         primaryColor: kPrimaryColor,
         canvasColor: kBackgroundColor,
-        textTheme: GoogleFonts.latoTextTheme(),
+        textTheme: GoogleFonts.quicksandTextTheme(),
       ),
       builder: (context, widget) => ResponsiveWrapper.builder(
         ClampingScrollWrapper.builder(context, widget),

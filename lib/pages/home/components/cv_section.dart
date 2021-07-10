@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/design_process.dart';
 import 'package:meet/utils/constants.dart';
@@ -47,7 +46,6 @@ class CvSection extends StatelessWidget {
   }
 
   Widget _buildUi(BuildContext context, double width) {
-    // we need the context to get maxWidth before the constraints below
     return ResponsiveWrapper(
       maxWidth: width,
       minWidth: width,
@@ -60,7 +58,7 @@ class CvSection extends StatelessWidget {
             children: [
               Text(
                 "BETTER DESIGN,\nBETTER EXPERIENCES",
-                style: GoogleFonts.oswald(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w900,
                   height: 1.8,
@@ -73,7 +71,7 @@ class CvSection extends StatelessWidget {
                   cursor: SystemMouseCursors.click,
                   child: Text(
                     "DOWNLOAD CV",
-                    style: GoogleFonts.oswald(
+                    style: TextStyle(
                       color: kPrimaryColor,
                       fontWeight: FontWeight.w900,
                       fontSize: 16.0,
@@ -123,7 +121,7 @@ class CvSection extends StatelessWidget {
                               ),
                               Text(
                                 designProcesses[index].title,
-                                style: GoogleFonts.oswald(
+                                style: TextStyle(
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,

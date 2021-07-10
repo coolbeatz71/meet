@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/footer_item.dart';
 import 'package:meet/utils/constants.dart';
@@ -10,26 +9,26 @@ final List<FooterItem> footerItems = [
   FooterItem(
     iconPath: "assets/mappin.png",
     title: "ADDRESS",
-    text1: "999 Carter Street",
-    text2: "Sailor Springs, IL 64234",
+    text1: "KN 134 St, Kigali/Rwanda",
+    text2: "",
   ),
   FooterItem(
     iconPath: "assets/phone.png",
     title: "PHONE",
-    text1: "+1 618-689-9604",
-    text2: "+1 781-689-9632",
+    text1: "+250 78 071 2761",
+    text2: "",
   ),
   FooterItem(
     iconPath: "assets/email.png",
     title: "EMAIL",
-    text1: "hello@example.com",
-    text2: "info@flutterpanda.com",
+    text1: "sigmacool@gmail.com",
+    text2: "",
   ),
   FooterItem(
     iconPath: "assets/whatsapp.png",
     title: "WHATSAPP",
-    text1: "+234 901-134-0095",
-    text2: "+234 901-134-0095",
+    text1: "+250 78 071 2761",
+    text2: "",
   )
 ];
 
@@ -85,7 +84,7 @@ Widget _buildUi(double width, BuildContext context) {
                                     ),
                                     Text(
                                       footerItem.title,
-                                      style: GoogleFonts.oswald(
+                                      style: TextStyle(
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.w700,
                                         color: Colors.white,
