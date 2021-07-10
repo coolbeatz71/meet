@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meet/models/carousel_item_model.dart';
 import 'package:meet/utils/constants.dart';
+import 'package:meet/utils/launch_email.dart';
 
 List<CarouselItemModel> carouselItems = List.generate(
   5,
@@ -13,7 +14,7 @@ List<CarouselItemModel> carouselItems = List.generate(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            "PRODUCT DESIGNER",
+            "Full-Stack PEAN, MERN Engineer",
             style: TextStyle(
               color: kPrimaryColor,
               fontWeight: FontWeight.w900,
@@ -24,10 +25,10 @@ List<CarouselItemModel> carouselItems = List.generate(
             height: 18.0,
           ),
           Text(
-            "MICHELE\nHARRINGTON",
+            "MUTOMBO\nJean-vincent",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 40.0,
+              fontSize: 42.0,
               fontWeight: FontWeight.w900,
               height: 1.3,
             ),
@@ -36,47 +37,14 @@ List<CarouselItemModel> carouselItems = List.generate(
             height: 10.0,
           ),
           Text(
-            "Full-stack developer, based in Barcelona",
+            "Hello, I am a full-stack software engineer passionate about web development and problem-solving. Graduated from the University of Tourism, Technology and Business Studies with a bachelor's degree in Business Information Technology in 2018, I am motivated to constantly improve my skills and change people’s lives through technology",
             style: TextStyle(
               color: kCaptionColor,
-              fontSize: 15.0,
-              height: 1.0,
+              fontSize: 14.0,
+              height: 1.8,
             ),
           ),
-          SizedBox(
-            height: 10.0,
-          ),
-          Container(
-            child: Wrap(
-              children: [
-                Text(
-                  "Need a full custom website?",
-                  style: TextStyle(
-                    color: kCaptionColor,
-                    fontSize: 15.0,
-                    height: 1.5,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: Text(
-                      " Got a project? Let's talk.",
-                      style: TextStyle(
-                        height: 1.5,
-                        color: Colors.white,
-                        fontSize: 15.0,
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 25.0,
-          ),
+          SizedBox(height: 25.0),
           MouseRegion(
             cursor: SystemMouseCursors.click,
             child: Container(
@@ -89,12 +57,14 @@ List<CarouselItemModel> carouselItems = List.generate(
                 horizontal: 28.0,
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () async {
+                  await launchMailto();
+                },
                 child: Text(
-                  "GET STARTED",
+                  "Got a project? Let's talk.",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 13.0,
+                    fontSize: 15.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -106,7 +76,7 @@ List<CarouselItemModel> carouselItems = List.generate(
     ),
     image: Container(
       child: Image.asset(
-        "assets/person.png",
+        "assets/me.png",
         fit: BoxFit.contain,
       ),
     ),
