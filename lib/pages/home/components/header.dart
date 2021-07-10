@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/header_item.dart';
 import 'package:meet/utils/constants.dart';
@@ -10,19 +10,14 @@ import 'package:meet/utils/screen_helper.dart';
 
 List<HeaderItem> headerItems = [
   HeaderItem(
-    title: "HOME",
+    title: "Home",
     onTap: () {},
   ),
-  HeaderItem(title: "MY INTRO", onTap: () {}),
-  HeaderItem(title: "SERVICES", onTap: () {}),
-  HeaderItem(title: "PORTFOLIO", onTap: () {}),
-  HeaderItem(title: "TESTIMONIALS", onTap: () {}),
-  HeaderItem(title: "BLOGS", onTap: () {}),
-  HeaderItem(
-    title: "HIRE ME",
-    onTap: () {},
-    isButton: true,
-  ),
+  HeaderItem(title: "Intro", onTap: () {}),
+  HeaderItem(title: "Projects", onTap: () {}),
+  HeaderItem(title: "Experiences", onTap: () {}),
+  HeaderItem(title: "Skills", onTap: () {}),
+  HeaderItem(title: "Contacts", onTap: () {}),
 ];
 
 class HeaderLogo extends StatelessWidget {
@@ -38,7 +33,7 @@ class HeaderLogo extends StatelessWidget {
               children: [
                 TextSpan(
                   text: "MJV",
-                  style: GoogleFonts.oswald(
+                  style: TextStyle(
                     color: Colors.white,
                     fontSize: 32.0,
                     fontWeight: FontWeight.bold,
@@ -46,7 +41,7 @@ class HeaderLogo extends StatelessWidget {
                 ),
                 TextSpan(
                   text: ".",
-                  style: GoogleFonts.oswald(
+                  style: TextStyle(
                     color: kPrimaryColor,
                     fontSize: 36.0,
                     fontWeight: FontWeight.bold,

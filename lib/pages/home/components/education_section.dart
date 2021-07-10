@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/education.dart';
 import 'package:meet/utils/constants.dart';
@@ -57,7 +56,7 @@ class EducationSection extends StatelessWidget {
           children: [
             Text(
               "EDUCATION",
-              style: GoogleFonts.oswald(
+              style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
                 fontSize: 30.0,
@@ -99,7 +98,7 @@ class EducationSection extends StatelessWidget {
                               children: [
                                 Text(
                                   education.period,
-                                  style: GoogleFonts.oswald(
+                                  style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w700,
                                     fontSize: 20.0,
