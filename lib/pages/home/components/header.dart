@@ -17,7 +17,11 @@ List<HeaderItem> headerItems = [
   HeaderItem(title: "Projects", onTap: () {}),
   HeaderItem(title: "Experiences", onTap: () {}),
   HeaderItem(title: "Skills", onTap: () {}),
-  HeaderItem(title: "Contacts", onTap: () {}),
+  HeaderItem(
+    title: "Contacts",
+    onTap: () {},
+    isButton: true,
+  ),
 ];
 
 class HeaderLogo extends StatelessWidget {
@@ -62,7 +66,7 @@ class HeaderRow extends StatelessWidget {
     return ResponsiveVisibility(
       visible: false,
       visibleWhen: [
-        Condition.largerThan(name: MOBILE),
+        Condition.largerThan(breakpoint: 450),
       ],
       child: Row(
         children: headerItems
@@ -118,56 +122,62 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(vertical: 18.0),
+      margin: EdgeInsets.only(bottom: 18.0),
       child: ScreenHelper(
-        desktop: Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.0),
-          child: buildHeader(),
-        ),
-        // We will make this in a bit
-        mobile: buildMobileHeader(),
-        tablet: buildHeader(),
+        desktop: buildHeader(kDesktopMaxWidth, context),
+        mobile: buildMobileHeader(getMobileMaxWidth(context), context),
+        tablet: buildHeader(kTabletMaxWidth, context),
       ),
     );
   }
 
   // mobile header
-  Widget buildMobileHeader() {
+  Widget buildMobileHeader(double width, BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            HeaderLogo(),
-            // Restart server to make icons work
-            // Lets make a scaffold key and create a drawer
-            GestureDetector(
-              onTap: () {
-                // Lets open drawer using global key
-                Globals.scaffoldKey.currentState!.openEndDrawer();
-              },
-              child: Icon(
-                FlutterIcons.menu_fea,
-                color: Colors.white,
-                size: 28.0,
-              ),
-            )
-          ],
+      child: Center(
+        child: ResponsiveWrapper(
+          maxWidth: width,
+          minWidth: width,
+          defaultScale: false,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              HeaderLogo(),
+              GestureDetector(
+                onTap: () {
+                  Globals.scaffoldKey.currentState!.openEndDrawer();
+                },
+                child: Icon(
+                  FlutterIcons.menu_fea,
+                  color: Colors.white,
+                  size: 28.0,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 
-  // Lets plan for mobile and smaller width screens
-  Widget buildHeader() {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          HeaderLogo(),
-          HeaderRow(),
-        ],
+  Widget buildHeader(double width, BuildContext context) {
+    return Center(
+      child: ResponsiveWrapper(
+        maxWidth: width,
+        minWidth: width,
+        defaultScale: false,
+        child: LayoutBuilder(
+          builder: (context, constraint) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                HeaderLogo(),
+                HeaderRow(),
+              ],
+            );
+          },
+        ),
       ),
     );
   }
