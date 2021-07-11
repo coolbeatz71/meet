@@ -21,9 +21,7 @@ List<CarouselItemModel> carouselItems = List.generate(
               fontSize: 16.0,
             ),
           ),
-          SizedBox(
-            height: 18.0,
-          ),
+          SizedBox(height: 18.0),
           Text(
             "MUTOMBO\nJean-vincent",
             style: TextStyle(
@@ -33,9 +31,7 @@ List<CarouselItemModel> carouselItems = List.generate(
               height: 1.3,
             ),
           ),
-          SizedBox(
-            height: 10.0,
-          ),
+          SizedBox(height: 10.0),
           Text(
             "Hello, I am a full-stack software engineer passionate about web development and problem-solving. Graduated from the University of Tourism, Technology and Business Studies with a bachelor's degree in Business Information Technology in 2018, I am motivated to constantly improve my skills and change people’s lives through technology",
             style: TextStyle(
