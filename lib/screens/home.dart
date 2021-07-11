@@ -1,21 +1,37 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:meet/pages/home/components/carousel.dart';
-import 'package:meet/pages/home/components/cv_section.dart';
-import 'package:meet/pages/home/components/experience_section.dart';
-import 'package:meet/pages/home/components/footer.dart';
-import 'package:meet/pages/home/components/header.dart';
-import 'package:meet/pages/home/components/skill_section.dart';
-import 'package:meet/pages/home/components/sponsors.dart';
-import 'package:meet/pages/home/components/project.dart';
+import 'package:meet/widgets/project_carousel.dart';
+import 'package:meet/widgets/box_offset.dart';
+import 'package:meet/widgets/carousel.dart';
+import 'package:meet/widgets/cv_section.dart';
+import 'package:meet/widgets/experience_section.dart';
+import 'package:meet/widgets/footer.dart';
+import 'package:meet/widgets/header.dart';
+import 'package:meet/widgets/skill_section.dart';
+import 'package:meet/widgets/sponsors.dart';
+import 'package:meet/widgets/project.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/globals.dart';
 
-import 'components/project_carousel.dart';
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
 
-class Home extends StatelessWidget {
+class _HomeState extends State<Home> {
   final CarouselController carouselCtrl = CarouselController();
+
+  List<double> anchors = [];
+  late ScrollController scrollController;
+
+  @override
+  void initState() {
+    scrollController = ScrollController();
+
+    anchors = List.generate(6, (index) => index.toDouble());
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +141,13 @@ class Home extends StatelessWidget {
                           ),
                           padding: EdgeInsets.symmetric(horizontal: 28.0),
                           child: TextButton(
-                            onPressed: headerItems[index].onTap,
+                            onPressed: () {
+                              scrollController.animateTo(
+                                anchors[index],
+                                duration: Duration(milliseconds: 400),
+                                curve: Curves.easeIn,
+                              );
+                            },
                             child: Text(
                               headerItems[index].title,
                               style: TextStyle(
@@ -158,31 +180,69 @@ class Home extends StatelessWidget {
       ),
       body: Container(
         child: SingleChildScrollView(
+          controller: scrollController,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                child: Header(),
+              BoxOffset(
+                getOffset: (offset) {
+                  anchors[0] = offset.dy;
+                },
+                child: Header(
+                  scrollController: scrollController,
+                  anchors: anchors,
+                ),
               ),
               Carousel(),
               SizedBox(height: 20.0),
-              CvSection(),
+              BoxOffset(
+                getOffset: (offset) {
+                  anchors[1] = offset.dy;
+                },
+                child: CvSection(),
+              ),
               SizedBox(height: 70.0),
-              ProjectCarousel(
-                items: projects,
-                carouselController: carouselCtrl,
+              BoxOffset(
+                getOffset: (offset) {
+                  anchors[2] = offset.dy;
+                },
+                child: ProjectCarousel(
+                  items: projects,
+                  carouselController: carouselCtrl,
+                ),
               ),
               SizedBox(height: 50.0),
-              EducationSection(),
+              BoxOffset(
+                getOffset: (offset) {
+                  anchors[3] = offset.dy;
+                },
+                child: ExperienceSection(),
+              ),
               SizedBox(height: 50.0),
-              SkillSection(),
+              BoxOffset(
+                getOffset: (offset) {
+                  anchors[4] = offset.dy;
+                },
+                child: SkillSection(),
+              ),
               SizedBox(height: 50.0),
               Sponsors(),
-              Footer()
+              BoxOffset(
+                getOffset: (offset) {
+                  anchors[5] = offset.dy;
+                },
+                child: Footer(),
+              )
             ],
           ),
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
   }
 }

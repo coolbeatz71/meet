@@ -1,41 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:meet/models/education.dart';
+import 'package:meet/models/experience.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
 
 import 'dart:html' as html;
 
-final List<Education> educationList = [
-  Education(
+final List<Experience> educationList = [
+  Experience(
     description: "Frontend Developer -- DAAS LTD - Rwanda",
     linkName: "www.codeofafrica.com",
     period: "June 2021 - PRESENT",
   ),
-  Education(
+  Experience(
     description: "Frontend Developer -- EXUUS LTD - Rwanda",
     linkName: "www.exuus.com",
     period: "June 2020 - PRESENT",
   ),
-  Education(
+  Experience(
     description: "Full Stack Engineer -- AKORION COMPANY LTD - Uganda",
     linkName: "www.ezyagric.com",
     period: "August 2019 - October 2019",
   ),
-  Education(
+  Experience(
     description: "Associate Software Engineer -- ANDELA LTD - Rwanda",
     linkName: "www.andela.com",
     period: "March 2019 - April 2020",
   ),
-  Education(
+  Experience(
     description: "Freelance Web Developer -- JKSS Connect – DR Congo",
     linkName: "",
     period: "2017 - june 2018",
   ),
 ];
 
-class EducationSection extends StatelessWidget {
+class ExperienceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -72,7 +72,7 @@ class EducationSection extends StatelessWidget {
                 Container(
                   constraints: BoxConstraints(maxWidth: 400.0),
                   child: Text(
-                    "A full stack all round developer that does all the job he needs to do at all times. t",
+                    "A full stack all round developer that does all the job he needs to do at all times.",
                     style: TextStyle(
                       color: Colors.white,
                       height: 1.5,

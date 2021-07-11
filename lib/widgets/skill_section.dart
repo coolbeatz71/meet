@@ -7,24 +7,24 @@ import 'package:meet/utils/screen_helper.dart';
 
 List<Skill> skills = [
   Skill(
-    skill: "Dart/Flutter",
-    percentage: 68,
+    skill: "Dart",
+    percentage: 62,
   ),
   Skill(
-    skill: "NodeJS/Typescript",
-    percentage: 85,
+    skill: "Javascript",
+    percentage: 80,
   ),
   Skill(
-    skill: "PHP/Laravel - Lumen",
-    percentage: 50,
+    skill: "PHP",
+    percentage: 78,
   ),
   Skill(
-    skill: "ReactJS/NextJS",
+    skill: "Python",
     percentage: 90,
   ),
   Skill(
-    skill: "Angular 7",
-    percentage: 60,
+    skill: "GoLang",
+    percentage: 40,
   ),
 ];
 
@@ -59,7 +59,9 @@ class SkillSection extends StatelessWidget {
                     width: 300.0,
                   ),
                 ),
-                SizedBox(width: 50.0),
+                SizedBox(
+                  width: 50.0,
+                ),
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 4,
                   child: Column(
@@ -75,7 +77,7 @@ class SkillSection extends StatelessWidget {
                           height: 1.3,
                         ),
                       ),
-                      SizedBox(height: 15.0),
+                      SizedBox(height: 50.0),
                       Column(
                         children: skills
                             .map(
@@ -93,7 +95,9 @@ class SkillSection extends StatelessWidget {
                                         color: Colors.white,
                                       ),
                                     ),
-                                    SizedBox(width: 10.0),
+                                    SizedBox(
+                                      width: 10.0,
+                                    ),
                                     Expanded(
                                       // remaining (blank part)
                                       flex: 100 - skill.percentage,
@@ -101,7 +105,9 @@ class SkillSection extends StatelessWidget {
                                         color: Colors.white,
                                       ),
                                     ),
-                                    SizedBox(width: 10.0),
+                                    SizedBox(
+                                      width: 10.0,
+                                    ),
                                     Text(
                                       "${skill.percentage}%",
                                       style: TextStyle(

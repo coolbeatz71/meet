@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:meet/pages/home/home.dart';
+import 'package:meet/screens/home.dart';
 import 'package:meet/utils/constants.dart';
 
 void main() {
