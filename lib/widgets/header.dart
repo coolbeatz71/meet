@@ -11,15 +11,15 @@ import 'package:meet/utils/screen_helper.dart';
 List<HeaderItem> headerItems = [
   HeaderItem(
     title: "Intro",
-    onTap: () {},
+    index: 0,
   ),
-  HeaderItem(title: "Backgrounds", onTap: () {}),
-  HeaderItem(title: "Contributions", onTap: () {}),
-  HeaderItem(title: "Experiences", onTap: () {}),
-  HeaderItem(title: "Skills", onTap: () {}),
+  HeaderItem(title: "Backgrounds", index: 1),
+  HeaderItem(title: "Contributions", index: 2),
+  HeaderItem(title: "Experiences", index: 3),
+  HeaderItem(title: "Skills", index: 4),
   HeaderItem(
     title: "Contacts",
-    onTap: () {},
+    index: 5,
     isButton: true,
   ),
 ];
@@ -61,6 +61,15 @@ class HeaderLogo extends StatelessWidget {
 }
 
 class HeaderRow extends StatelessWidget {
+  final ScrollController scrollController;
+  final List anchors;
+
+  const HeaderRow({
+    Key? key,
+    required this.scrollController,
+    required this.anchors,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveVisibility(
@@ -80,14 +89,22 @@ class HeaderRow extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         padding: EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 5.0),
+                          horizontal: 20.0,
+                          vertical: 5.0,
+                        ),
                         child: TextButton(
-                          onPressed: item.onTap,
+                          onPressed: () {
+                            scrollController.animateTo(
+                              anchors[item.index],
+                              duration: Duration(milliseconds: 400),
+                              curve: Curves.easeIn,
+                            );
+                          },
                           child: Text(
                             item.title,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 13.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -99,12 +116,18 @@ class HeaderRow extends StatelessWidget {
                       child: Container(
                         margin: EdgeInsets.only(right: 30.0),
                         child: GestureDetector(
-                          onTap: item.onTap,
+                          onTap: () {
+                            scrollController.animateTo(
+                              anchors[item.index],
+                              duration: Duration(milliseconds: 400),
+                              curve: Curves.easeIn,
+                            );
+                          },
                           child: Text(
                             item.title,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 13.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -119,15 +142,26 @@ class HeaderRow extends StatelessWidget {
 }
 
 class Header extends StatelessWidget {
+  final ScrollController scrollController;
+  final List anchors;
+
+  const Header({
+    Key? key,
+    required this.anchors,
+    required this.scrollController,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 18.0),
       margin: EdgeInsets.only(bottom: 18.0),
       child: ScreenHelper(
-        desktop: buildHeader(kDesktopMaxWidth, context),
+        desktop:
+            buildHeader(kDesktopMaxWidth, context, scrollController, anchors),
         mobile: buildMobileHeader(getMobileMaxWidth(context), context),
-        tablet: buildHeader(kTabletMaxWidth, context),
+        tablet:
+            buildHeader(kTabletMaxWidth, context, scrollController, anchors),
       ),
     );
   }
@@ -161,7 +195,12 @@ class Header extends StatelessWidget {
     );
   }
 
-  Widget buildHeader(double width, BuildContext context) {
+  Widget buildHeader(
+    double width,
+    BuildContext context,
+    ScrollController scrollController,
+    List anchors,
+  ) {
     return Center(
       child: ResponsiveWrapper(
         maxWidth: width,
@@ -173,7 +212,7 @@ class Header extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 HeaderLogo(),
-                HeaderRow(),
+                HeaderRow(scrollController: scrollController, anchors: anchors),
               ],
             );
           },

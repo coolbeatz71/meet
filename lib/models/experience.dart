@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Education {
+class Experience {
   final String description;
   final String linkName;
   final String period;
 
-  Education({
+  Experience({
     required this.description,
     required this.linkName,
     required this.period,

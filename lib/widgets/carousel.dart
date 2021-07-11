@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:meet/utils/carousel_screens.dart';
+import 'package:meet/widgets/carousel_items.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:meet/pages/home/components/carousel_items.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
 
