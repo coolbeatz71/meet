@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:meet/models/carousel_item_model.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/launch_email.dart';
+
+import 'dart:html' as html;
 
 List<CarouselItemModel> carouselItems = List.generate(
   5,
@@ -13,6 +16,53 @@ List<CarouselItemModel> carouselItems = List.generate(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Ink(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(80.0),
+                  border: Border.all(width: 1.0, color: Colors.white),
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    html.window.open(
+                      "https://github.com/coolbeatz71",
+                      'github',
+                    );
+                  },
+                  splashRadius: 22.0,
+                  icon: Icon(
+                    FontAwesome.github,
+                    color: Colors.white,
+                  ),
+                  iconSize: 28.0,
+                ),
+              ),
+              SizedBox(width: 18.0),
+              Ink(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(80.0),
+                  border: Border.all(width: 1.0, color: Colors.white),
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    html.window.open(
+                      "https://gitlab.com/coolbeatz71",
+                      'gitlab',
+                    );
+                  },
+                  splashRadius: 22.0,
+                  icon: Icon(
+                    FontAwesome.gitlab,
+                    color: Colors.white,
+                  ),
+                  iconSize: 28.0,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 18.0),
           Text(
             "Full-Stack PEAN, MERN Engineer",
             style: TextStyle(

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meet/pages/home/components/carousel.dart';
 import 'package:meet/pages/home/components/cv_section.dart';
-import 'package:meet/pages/home/components/education_section.dart';
+import 'package:meet/pages/home/components/experience_section.dart';
+import 'package:meet/pages/home/components/footer.dart';
 import 'package:meet/pages/home/components/header.dart';
 import 'package:meet/pages/home/components/skill_section.dart';
 import 'package:meet/pages/home/components/sponsors.dart';
@@ -177,6 +178,7 @@ class Home extends StatelessWidget {
               SkillSection(),
               SizedBox(height: 50.0),
               Sponsors(),
+              Footer()
             ],
           ),
         ),

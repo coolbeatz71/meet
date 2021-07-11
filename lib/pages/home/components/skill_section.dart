@@ -7,24 +7,24 @@ import 'package:meet/utils/screen_helper.dart';
 
 List<Skill> skills = [
   Skill(
-    skill: "Dart",
-    percentage: 62,
+    skill: "Dart/Flutter",
+    percentage: 68,
   ),
   Skill(
-    skill: "Javascript",
-    percentage: 80,
+    skill: "NodeJS/Typescript",
+    percentage: 85,
   ),
   Skill(
-    skill: "PHP",
-    percentage: 78,
+    skill: "PHP/Laravel - Lumen",
+    percentage: 50,
   ),
   Skill(
-    skill: "Python",
+    skill: "ReactJS/NextJS",
     percentage: 90,
   ),
   Skill(
-    skill: "GoLang",
-    percentage: 40,
+    skill: "Angular 7",
+    percentage: 60,
   ),
 ];
 
@@ -59,9 +59,7 @@ class SkillSection extends StatelessWidget {
                     width: 300.0,
                   ),
                 ),
-                SizedBox(
-                  width: 50.0,
-                ),
+                SizedBox(width: 50.0),
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 4,
                   child: Column(
@@ -77,20 +75,7 @@ class SkillSection extends StatelessWidget {
                           height: 1.3,
                         ),
                       ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text(
-                        "This is all the skills listed below more will be added in due time. This is all the skills listed below more will be added in due time.",
-                        style: TextStyle(
-                          color: kCaptionColor,
-                          height: 1.5,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
+                      SizedBox(height: 15.0),
                       Column(
                         children: skills
                             .map(
@@ -108,9 +93,7 @@ class SkillSection extends StatelessWidget {
                                         color: Colors.white,
                                       ),
                                     ),
-                                    SizedBox(
-                                      width: 10.0,
-                                    ),
+                                    SizedBox(width: 10.0),
                                     Expanded(
                                       // remaining (blank part)
                                       flex: 100 - skill.percentage,
@@ -118,9 +101,7 @@ class SkillSection extends StatelessWidget {
                                         color: Colors.white,
                                       ),
                                     ),
-                                    SizedBox(
-                                      width: 10.0,
-                                    ),
+                                    SizedBox(width: 10.0),
                                     Text(
                                       "${skill.percentage}%",
                                       style: TextStyle(
