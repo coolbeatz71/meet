@@ -5,30 +5,33 @@ import 'package:meet/models/education.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
 
+import 'dart:html' as html;
+
 final List<Education> educationList = [
   Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2019 - PRESENT",
+    description: "Frontend Developer -- DAAS LTD - Rwanda",
+    linkName: "www.codeofafrica.com",
+    period: "June 2021 - PRESENT",
   ),
   Education(
-    description:
-        "This is a sample education and details about it is stated below.This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2018 - 2019",
+    description: "Frontend Developer -- EXUUS LTD - Rwanda",
+    linkName: "www.exuus.com",
+    period: "June 2020 - PRESENT",
   ),
   Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2017 - 2018",
+    description: "Web Developer -- AKORION COMPANY LTD - Uganda",
+    linkName: "www.ezyagric.com",
+    period: "August 2019 - October 2019",
   ),
   Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2016 - 2017",
+    description: "Associate Software Engineer -- ANDELA LTD - Rwanda",
+    linkName: "www.andela.com",
+    period: "March 2019 - April 2020",
+  ),
+  Education(
+    description: "Freelance Web Developer -- JKSS Connect – DR Congo",
+    linkName: "",
+    period: "2017 - june 2018",
   ),
 ];
 
@@ -55,7 +58,7 @@ class EducationSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              "EDUCATION",
+              "WORK EXPEPIENCE",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
@@ -122,7 +125,12 @@ class EducationSection extends StatelessWidget {
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+                                      html.window.open(
+                                        "https://${education.linkName}",
+                                        'url',
+                                      );
+                                    },
                                     child: Text(
                                       education.linkName,
                                       style: TextStyle(

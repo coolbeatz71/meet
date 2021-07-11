@@ -14,7 +14,7 @@ List<HeaderItem> headerItems = [
     onTap: () {},
   ),
   HeaderItem(title: "Backgrounds", onTap: () {}),
-  HeaderItem(title: "Projects", onTap: () {}),
+  HeaderItem(title: "Contributions", onTap: () {}),
   HeaderItem(title: "Experiences", onTap: () {}),
   HeaderItem(title: "Skills", onTap: () {}),
   HeaderItem(

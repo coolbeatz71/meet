@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:meet/utils/carousel_screens.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/pages/home/components/carousel_items.dart';
 import 'package:meet/utils/constants.dart';
@@ -22,7 +23,6 @@ class Carousel extends StatelessWidget {
             child: CarouselSlider(
               carouselController: carouselController,
               options: CarouselOptions(
-                // autoPlay: true,
                 viewportFraction: 1,
                 scrollPhysics: NeverScrollableScrollPhysics(),
                 height: carouselContainerHeight,
@@ -37,17 +37,17 @@ class Carousel extends StatelessWidget {
                       ),
                       child: ScreenHelper(
                         // Responsive views
-                        desktop: _buildDesktop(
+                        desktop: buildDesktop(
                           context,
                           carouselItems[index].text,
                           carouselItems[index].image,
                         ),
-                        tablet: _buildTablet(
+                        tablet: buildTablet(
                           context,
                           carouselItems[index].text,
                           carouselItems[index].image,
                         ),
-                        mobile: _buildMobile(
+                        mobile: buildMobile(
                           context,
                           carouselItems[index].text,
                           carouselItems[index].image,
@@ -63,58 +63,4 @@ class Carousel extends StatelessWidget {
       ),
     );
   }
-}
-
-// Big screens
-Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
-  return Center(
-    child: ResponsiveWrapper(
-      maxWidth: kDesktopMaxWidth,
-      minWidth: kDesktopMaxWidth,
-      defaultScale: false,
-      child: Row(
-        children: [
-          Expanded(
-            child: text,
-          ),
-          Expanded(
-            child: image,
-          )
-        ],
-      ),
-    ),
-  );
-}
-
-// Mid screens
-Widget _buildTablet(BuildContext context, Widget text, Widget image) {
-  return Center(
-    child: ResponsiveWrapper(
-      maxWidth: kTabletMaxWidth,
-      minWidth: kTabletMaxWidth,
-      defaultScale: false,
-      child: Row(
-        children: [
-          Expanded(
-            child: text,
-          ),
-          Expanded(
-            child: image,
-          )
-        ],
-      ),
-    ),
-  );
-}
-
-// SMall Screens
-
-Widget _buildMobile(BuildContext context, Widget text, Widget image) {
-  return Container(
-    constraints: BoxConstraints(
-      maxWidth: getMobileMaxWidth(context),
-    ),
-    width: double.infinity,
-    child: text,
-  );
 }
