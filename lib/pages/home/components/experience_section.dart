@@ -19,7 +19,7 @@ final List<Education> educationList = [
     period: "June 2020 - PRESENT",
   ),
   Education(
-    description: "Web Developer -- AKORION COMPANY LTD - Uganda",
+    description: "Full Stack Engineer -- AKORION COMPANY LTD - Uganda",
     linkName: "www.ezyagric.com",
     period: "August 2019 - October 2019",
   ),
@@ -66,15 +66,13 @@ class EducationSection extends StatelessWidget {
                 height: 1.3,
               ),
             ),
-            SizedBox(
-              height: 5.0,
-            ),
+            SizedBox(height: 5.0),
             Wrap(
               children: [
                 Container(
                   constraints: BoxConstraints(maxWidth: 400.0),
                   child: Text(
-                    "A full stack all round developer that does all the job he needs to do at all times. Actually this is a false statement",
+                    "A full stack all round developer that does all the job he needs to do at all times. t",
                     style: TextStyle(
                       color: Colors.white,
                       height: 1.5,

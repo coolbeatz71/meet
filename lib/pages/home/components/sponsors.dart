@@ -4,11 +4,10 @@ import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
 
 final List<String> sponsorsLogo = [
-  "assets/brand1.png",
-  "assets/brand2.png",
-  "assets/brand3.png",
-  "assets/brand4.png",
-  "assets/brand5.png",
+  "assets/andela-logo.png",
+  "assets/ezyagric-logo.png",
+  "assets/exuus-logo.png",
+  "assets/coa-logo.png",
 ];
 
 class Sponsors extends StatelessWidget {
@@ -39,10 +38,9 @@ Widget _buildUi(double width) {
             children: sponsorsLogo
                 .map(
                   (logo) => Container(
-                    height: 20.0,
+                    height: 50.0,
                     child: Image.asset(logo),
                     constraints: BoxConstraints(
-                      // max of 3 per row when on mobile and 5 per row on bigger screens
                       maxWidth: ScreenHelper.isMobile(context)
                           ? constraints.maxWidth / 3.0 - 50.0
                           : constraints.maxWidth / 5.0 - 50.0,
