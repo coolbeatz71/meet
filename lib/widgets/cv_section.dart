@@ -14,25 +14,25 @@ String profileUrl =
 
 final List<DesignProcess> designProcesses = [
   DesignProcess(
-    title: "Web Language",
+    title: "Web",
     icon: FontAwesome.code,
     subtitle:
         "HTML/CSS, SASS, React/NodeJS/Typescript, etc. MVC pattern and REST/GraphQL architecture.",
   ),
   DesignProcess(
-    title: "Database Tool",
+    title: "Database",
     icon: FontAwesome.database,
     subtitle:
         "MySQL, PostgreSQL. Familiar with NoSQL database such as MongoDB, Couchbase and Firebase.",
   ),
   DesignProcess(
-    title: "Mobile Tool",
+    title: "Mobile",
     icon: FontAwesome.mobile,
     subtitle:
         "Familiar with Cross-platform technologies such as Flutter/Dart and familiar with Ionic 3.",
   ),
   DesignProcess(
-    title: "CSS Framework",
+    title: "Style",
     icon: FontAwesome.css3,
     subtitle:
         "Familiar with CSS frameworks such as Ant Design, Material UI, CoreUI, Tailwind CSS, etc.",
@@ -83,7 +83,7 @@ class CvSection extends StatelessWidget {
                     ),
                     height: 48.0,
                     padding: EdgeInsets.symmetric(
-                      horizontal: 28.0,
+                      horizontal: 16.0,
                     ),
                     child: TextButton(
                       onPressed: () {
@@ -94,7 +94,7 @@ class CvSection extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w900,
-                          fontSize: 16.0,
+                          fontSize: 13.0,
                         ),
                       ),
                     ),

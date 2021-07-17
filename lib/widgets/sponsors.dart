@@ -8,6 +8,8 @@ final List<String> sponsorsLogo = [
   "assets/ezyagric-logo.png",
   "assets/exuus-logo.png",
   "assets/coa-logo.png",
+  "assets/alfatier-logo.png",
+  "assets/reconstruction-logo.png",
 ];
 
 class Sponsors extends StatelessWidget {
@@ -38,7 +40,7 @@ Widget _buildUi(double width) {
             children: sponsorsLogo
                 .map(
                   (logo) => Container(
-                    height: 50.0,
+                    height: 40.0,
                     child: Image.asset(logo),
                     constraints: BoxConstraints(
                       maxWidth: ScreenHelper.isMobile(context)

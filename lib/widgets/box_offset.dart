@@ -13,7 +13,6 @@ class BoxOffset extends StatefulWidget {
 
 class _BoxOffsetState extends State<BoxOffset> {
   GlobalKey widgetKey = GlobalKey();
-
   Offset offset = Offset(0.0, 0.0);
 
   @override

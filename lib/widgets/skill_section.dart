@@ -7,24 +7,24 @@ import 'package:meet/utils/screen_helper.dart';
 
 List<Skill> skills = [
   Skill(
-    skill: "Dart",
-    percentage: 62,
+    skill: "Javascript/NodeJS/Typescript",
+    percentage: 85,
   ),
   Skill(
-    skill: "Javascript",
-    percentage: 80,
+    skill: "PHP/Laravel - Lumen",
+    percentage: 52,
   ),
   Skill(
-    skill: "PHP",
-    percentage: 78,
-  ),
-  Skill(
-    skill: "Python",
+    skill: "ReactJs/NextJs",
     percentage: 90,
   ),
   Skill(
-    skill: "GoLang",
-    percentage: 40,
+    skill: "Angular 7",
+    percentage: 70,
+  ),
+  Skill(
+    skill: "Dart/Flutter",
+    percentage: 65,
   ),
 ];
 
@@ -95,19 +95,15 @@ class SkillSection extends StatelessWidget {
                                         color: Colors.white,
                                       ),
                                     ),
-                                    SizedBox(
-                                      width: 10.0,
-                                    ),
+                                    SizedBox(width: 10.0),
                                     Expanded(
-                                      // remaining (blank part)
                                       flex: 100 - skill.percentage,
                                       child: Divider(
                                         color: Colors.white,
+                                        height: 2.0,
                                       ),
                                     ),
-                                    SizedBox(
-                                      width: 10.0,
-                                    ),
+                                    SizedBox(width: 10.0),
                                     Text(
                                       "${skill.percentage}%",
                                       style: TextStyle(
