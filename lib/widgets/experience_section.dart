@@ -1,39 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:meet/data/experience.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/experience.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
 
 import 'dart:html' as html;
-
-final List<Experience> educationList = [
-  Experience(
-    description: "Frontend Developer -- DAAS LTD - Rwanda",
-    linkName: "www.codeofafrica.com",
-    period: "June 2021 - PRESENT",
-  ),
-  Experience(
-    description: "Frontend Developer -- EXUUS LTD - Rwanda",
-    linkName: "www.exuus.com",
-    period: "June 2020 - PRESENT",
-  ),
-  Experience(
-    description: "Full Stack Engineer -- AKORION COMPANY LTD - Uganda",
-    linkName: "www.ezyagric.com",
-    period: "August 2019 - October 2019",
-  ),
-  Experience(
-    description: "Associate Software Engineer -- ANDELA LTD - Rwanda",
-    linkName: "www.andela.com",
-    period: "March 2019 - April 2020",
-  ),
-  Experience(
-    description: "Freelance Web Developer -- JKSS Connect – DR Congo",
-    linkName: "",
-    period: "2017 - june 2018",
-  ),
-];
 
 class ExperienceSection extends StatelessWidget {
   @override
@@ -90,7 +63,7 @@ class ExperienceSection extends StatelessWidget {
                   child: Wrap(
                     spacing: 20.0,
                     runSpacing: 20.0,
-                    children: educationList
+                    children: experienceList
                         .map(
                           (education) => Container(
                             width: constraints.maxWidth / 2.0 - 20.0,
@@ -105,9 +78,7 @@ class ExperienceSection extends StatelessWidget {
                                     fontSize: 20.0,
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
+                                SizedBox(height: 5.0),
                                 Text(
                                   education.description,
                                   maxLines: 4,
@@ -117,9 +88,7 @@ class ExperienceSection extends StatelessWidget {
                                     height: 1.5,
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 20.0,
-                                ),
+                                SizedBox(height: 20.0),
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: GestureDetector(
@@ -137,9 +106,7 @@ class ExperienceSection extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 40.0,
-                                )
+                                SizedBox(height: 40.0)
                               ],
                             ),
                           ),

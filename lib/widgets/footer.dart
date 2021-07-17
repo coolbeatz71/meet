@@ -1,36 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:meet/data/footer.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:meet/models/footer_item.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
-
-final List<FooterItem> footerItems = [
-  FooterItem(
-    iconPath: "assets/mappin.png",
-    title: "ADDRESS",
-    text1: "KN 134 St, Kigali/Rwanda",
-    text2: "",
-  ),
-  FooterItem(
-    iconPath: "assets/phone.png",
-    title: "PHONE",
-    text1: "+250 78 071 2761",
-    text2: "",
-  ),
-  FooterItem(
-    iconPath: "assets/email.png",
-    title: "EMAIL",
-    text1: "sigmacool@gmail.com",
-    text2: "",
-  ),
-  FooterItem(
-    iconPath: "assets/whatsapp.png",
-    title: "WHATSAPP",
-    text1: "+250 78 071 2761",
-    text2: "",
-  )
-];
 
 class Footer extends StatelessWidget {
   @override
@@ -82,13 +55,12 @@ Widget _buildUi(double width, BuildContext context) {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
+                                      Icon(
                                         footerItem.iconPath,
-                                        width: 25.0,
+                                        size: 25.0,
+                                        color: kPrimaryColor,
                                       ),
-                                      SizedBox(
-                                        width: 15.0,
-                                      ),
+                                      SizedBox(width: 5.0),
                                       Text(
                                         footerItem.title,
                                         style: TextStyle(
@@ -99,9 +71,7 @@ Widget _buildUi(double width, BuildContext context) {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(
-                                    height: 15.0,
-                                  ),
+                                  SizedBox(height: 15.0),
                                   RichText(
                                     textAlign: TextAlign.start,
                                     text: TextSpan(

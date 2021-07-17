@@ -156,6 +156,7 @@ class Header extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 18.0),
       margin: EdgeInsets.only(bottom: 18.0),
+      height: 62.0,
       child: ScreenHelper(
         desktop:
             buildHeader(kDesktopMaxWidth, context, scrollController, anchors),
