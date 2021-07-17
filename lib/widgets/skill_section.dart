@@ -1,32 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:meet/data/skills.dart';
 
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/skill.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
-
-List<Skill> skills = [
-  Skill(
-    skill: "Javascript/NodeJS/Typescript",
-    percentage: 85,
-  ),
-  Skill(
-    skill: "PHP/Laravel - Lumen",
-    percentage: 52,
-  ),
-  Skill(
-    skill: "ReactJs/NextJs",
-    percentage: 90,
-  ),
-  Skill(
-    skill: "Angular 7",
-    percentage: 70,
-  ),
-  Skill(
-    skill: "Dart/Flutter",
-    percentage: 65,
-  ),
-];
 
 class SkillSection extends StatelessWidget {
   @override
@@ -59,9 +37,7 @@ class SkillSection extends StatelessWidget {
                     width: 300.0,
                   ),
                 ),
-                SizedBox(
-                  width: 50.0,
-                ),
+                SizedBox(width: 50.0),
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 4,
                   child: Column(
@@ -91,7 +67,12 @@ class SkillSection extends StatelessWidget {
                                         padding: EdgeInsets.only(left: 10.0),
                                         alignment: Alignment.centerLeft,
                                         height: 38.0,
-                                        child: Text(skill.skill),
+                                        child: Text(
+                                          skill.skill,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w900,
+                                          ),
+                                        ),
                                         color: Colors.white,
                                       ),
                                     ),
@@ -116,10 +97,10 @@ class SkillSection extends StatelessWidget {
                               ),
                             )
                             .toList(),
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           );

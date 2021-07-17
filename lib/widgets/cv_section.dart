@@ -1,43 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:meet/data/background.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:meet/models/design_process.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/screen_helper.dart';
+
 import 'dart:html' as html;
 
 String cvUrl =
     "https://drive.google.com/file/d/1uYtH7Fdis7iYDNkfwlA3bpg0reiPXKtu/view?usp=sharing";
 String profileUrl =
     "https://docs.google.com/presentation/d/15sNQrBbKHHPSCdofciya0XGESFcn3ONBk8V1qfaWB0o/edit#slide=id.p";
-
-final List<DesignProcess> designProcesses = [
-  DesignProcess(
-    title: "Web",
-    icon: FontAwesome.code,
-    subtitle:
-        "HTML/CSS, SASS, React/NodeJS/Typescript, etc. MVC pattern and REST/GraphQL architecture.",
-  ),
-  DesignProcess(
-    title: "Database",
-    icon: FontAwesome.database,
-    subtitle:
-        "MySQL, PostgreSQL. Familiar with NoSQL database such as MongoDB, Couchbase and Firebase.",
-  ),
-  DesignProcess(
-    title: "Mobile",
-    icon: FontAwesome.mobile,
-    subtitle:
-        "Familiar with Cross-platform technologies such as Flutter/Dart and familiar with Ionic 3.",
-  ),
-  DesignProcess(
-    title: "Style",
-    icon: FontAwesome.css3,
-    subtitle:
-        "Familiar with CSS frameworks such as Ant Design, Material UI, CoreUI, Tailwind CSS, etc.",
-  ),
-];
 
 class CvSection extends StatelessWidget {
   @override

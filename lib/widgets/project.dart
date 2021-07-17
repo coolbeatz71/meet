@@ -128,9 +128,7 @@ class Project extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
+                                SizedBox(width: 10.0),
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: Container(

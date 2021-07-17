@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       darkTheme: Theme.of(context).copyWith(
         platform: TargetPlatform.android,
-        scaffoldBackgroundColor: kBackgroundColor,
+        scaffoldBackgroundColor: kBackgroundColor.withOpacity(0.85),
         primaryColor: kPrimaryColor,
         canvasColor: kBackgroundColor,
         textTheme: GoogleFonts.quicksandTextTheme(),
@@ -33,11 +33,17 @@ class MyApp extends StatelessWidget {
           ResponsiveBreakpoint.resize(1200, name: DESKTOP),
           ResponsiveBreakpoint.resize(2460, name: "4K"),
         ],
-        background: Container(
-          color: kBackgroundColor,
+        background: Container(color: kBackgroundColor),
+      ),
+      home: Container(
+        child: Home(),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/bg.png"),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
-      home: Home(),
     );
   }
 }
