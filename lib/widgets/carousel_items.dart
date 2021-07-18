@@ -93,26 +93,25 @@ List<CarouselItemModel> carouselItems = List.generate(
           SizedBox(height: 25.0),
           MouseRegion(
             cursor: SystemMouseCursors.click,
-            child: Container(
-              decoration: BoxDecoration(
-                color: kPrimaryColor,
-                borderRadius: BorderRadius.circular(8.0),
-              ),
+            child: MaterialButton(
+              hoverColor: kPrimaryHoverColor,
               height: 48.0,
+              color: kPrimaryColor,
+              onPressed: () async {
+                await launchMailto();
+              },
               padding: EdgeInsets.symmetric(
                 horizontal: 28.0,
               ),
-              child: TextButton(
-                onPressed: () async {
-                  await launchMailto();
-                },
-                child: Text(
-                  "Got a project? Let's talk.",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Text(
+                "Got a project? Let's talk.",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

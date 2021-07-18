@@ -1,8 +1,8 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meet/screens/splash.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:meet/screens/home.dart';
 import 'package:meet/utils/constants.dart';
 
 void main() {
@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       darkTheme: Theme.of(context).copyWith(
         platform: TargetPlatform.android,
-        scaffoldBackgroundColor: kBackgroundColor.withOpacity(0.85),
+        scaffoldBackgroundColor: kBackgroundColor.withOpacity(0.8),
         primaryColor: kPrimaryColor,
-        canvasColor: kBackgroundColor,
+        canvasColor: kBackgroundColor.withOpacity(0.85),
         textTheme: GoogleFonts.quicksandTextTheme(),
       ),
       builder: (context, widget) => ResponsiveWrapper.builder(
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         background: Container(color: kBackgroundColor),
       ),
       home: Container(
-        child: Home(),
+        child: SplashScreen(),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/bg.png"),

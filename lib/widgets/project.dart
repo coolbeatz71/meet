@@ -102,27 +102,26 @@ class Project extends StatelessWidget {
                               children: [
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: kPrimaryColor,
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
+                                  child: MaterialButton(
                                     height: 48.0,
+                                    color: kPrimaryColor,
+                                    hoverColor: kPrimaryHoverColor,
                                     padding: EdgeInsets.symmetric(
                                       horizontal: 28.0,
                                     ),
-                                    child: TextButton(
-                                      onPressed: () {
-                                        html.window.open(this.url, 'url');
-                                      },
-                                      child: Center(
-                                        child: Text(
-                                          "VISIT",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    onPressed: () {
+                                      html.window.open(this.url, 'url');
+                                    },
+                                    child: Center(
+                                      child: Text(
+                                        "VISIT",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 13.0,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ),
@@ -138,17 +137,18 @@ class Project extends StatelessWidget {
                                         color: kPrimaryColor,
                                       ),
                                     ),
-                                    height: 48.0,
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 28.0),
-                                    child: TextButton(
+                                    height: 40.0,
+                                    child: OutlinedButton(
                                       onPressed: () {
                                         carouselController.nextPage(
                                           duration: Duration(milliseconds: 300),
                                           curve: Curves.linear,
                                         );
                                       },
-                                      child: Center(
+                                      child: Container(
+                                        margin: EdgeInsets.symmetric(
+                                          horizontal: 28.0,
+                                        ),
                                         child: Text(
                                           "NEXT APP",
                                           style: TextStyle(
