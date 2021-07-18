@@ -4,8 +4,8 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"index.html": "ee808f548f35a45adc687c75333b7c0b",
-"/": "ee808f548f35a45adc687c75333b7c0b",
+"index.html": "d18fe62f9beff132e9ab4cc488ca25fd",
+"/": "d18fe62f9beff132e9ab4cc488ca25fd",
 "assets/FontManifest.json": "a1361f044cbc49a6542cb8b654999296",
 "assets/assets/person_small.png": "0acf47d9187f159050e94dfae499d7db",
 "assets/assets/ezyagric-logo.png": "0592c732af976cf252a8df11482f330f",
@@ -51,9 +51,10 @@ const RESOURCES = {
 "assets/fonts/Quicksand-Medium.ttf": "865b25e449878b6b4d1f9e098ff2f510",
 "assets/fonts/Quicksand-Regular.ttf": "216d43ee8707910af457af569eda1dec",
 "assets/fonts/Quicksand-SemiBold.ttf": "c82b184bf7450e14adccb7b0d6117474",
-"assets/NOTICES": "bd9cfdc3ddb612d4ba5cce69da59b960",
-"main.dart.js": "b50e65f3f893cf467c42e8947f7dffb9",
+"assets/NOTICES": "1103705efe20a7ed95f1dc18d8f7ce42",
+"main.dart.js": "bb7c453c3fb12fcba7bd44eabcf8f836",
 "manifest.json": "a88872b3febc0c2f10773b01b06dfb04",
+"favicon.ico": "0f1947096ab41db1e2fddf76c30b6dee",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "version.json": "946c4874b391676147eb3ce07582ba0f"
