@@ -83,23 +83,24 @@ class HeaderRow extends StatelessWidget {
               (item) => item.isButton
                   ? MouseRegion(
                       cursor: SystemMouseCursors.click,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: kDangerColor,
+                      child: MaterialButton(
+                        color: kPrimaryColor,
+                        hoverColor: kPrimaryHoverColor,
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 20.0,
-                          vertical: 5.0,
-                        ),
-                        child: TextButton(
-                          onPressed: () {
-                            scrollController.animateTo(
-                              anchors[item.index],
-                              duration: Duration(milliseconds: 400),
-                              curve: Curves.easeIn,
-                            );
-                          },
+                        onPressed: () {
+                          scrollController.animateTo(
+                            anchors[item.index],
+                            duration: Duration(milliseconds: 400),
+                            curve: Curves.easeIn,
+                          );
+                        },
+                        child: Container(
+                          margin: EdgeInsets.symmetric(
+                            horizontal: 20.0,
+                            vertical: 8.0,
+                          ),
                           child: Text(
                             item.title,
                             style: TextStyle(

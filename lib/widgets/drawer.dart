@@ -26,28 +26,27 @@ class AppDrawer extends StatelessWidget {
               return headerItems[index].isButton
                   ? MouseRegion(
                       cursor: SystemMouseCursors.click,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: kDangerColor,
+                      child: MaterialButton(
+                        color: kPrimaryColor,
+                        hoverColor: kPrimaryHoverColor,
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         padding: EdgeInsets.symmetric(horizontal: 28.0),
-                        child: TextButton(
-                          onPressed: () {
-                            scrollController.animateTo(
-                              anchors[index],
-                              duration: Duration(milliseconds: 400),
-                              curve: Curves.easeIn,
-                            );
-                            Navigator.of(context).pop();
-                          },
-                          child: Text(
-                            headerItems[index].title,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        onPressed: () {
+                          scrollController.animateTo(
+                            anchors[index],
+                            duration: Duration(milliseconds: 400),
+                            curve: Curves.easeIn,
+                          );
+                          Navigator.of(context).pop();
+                        },
+                        child: Text(
+                          headerItems[index].title,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),

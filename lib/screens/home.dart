@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -28,8 +30,12 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    scrollController = ScrollController();
+    final loader = document.getElementsByClassName('container');
+    if (loader.isNotEmpty) {
+      loader.first.remove();
+    }
 
+    scrollController = ScrollController();
     anchors = List.generate(6, (index) => index.toDouble());
     super.initState();
   }

@@ -49,26 +49,25 @@ class CvSection extends StatelessWidget {
                 onTap: () {},
                 child: MouseRegion(
                   cursor: SystemMouseCursors.click,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.0),
-                      color: kPrimaryColor,
-                    ),
+                  child: MaterialButton(
                     height: 48.0,
+                    color: kPrimaryColor,
+                    hoverColor: kPrimaryHoverColor,
+                    onPressed: () {
+                      html.window.open(cvUrl, 'Download CV');
+                    },
                     padding: EdgeInsets.symmetric(
                       horizontal: 16.0,
                     ),
-                    child: TextButton(
-                      onPressed: () {
-                        html.window.open(cvUrl, 'Download CV');
-                      },
-                      child: Text(
-                        "DOWNLOAD CV",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 13.0,
-                        ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    child: Text(
+                      "DOWNLOAD CV",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 13.0,
                       ),
                     ),
                   ),
@@ -149,20 +148,22 @@ class CvSection extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   border: Border.all(width: 1.0, color: kPrimaryColor),
                 ),
-                height: 48.0,
-                padding: EdgeInsets.symmetric(
-                  horizontal: 20.0,
-                ),
-                child: TextButton(
+                height: 42.0,
+                child: OutlinedButton(
                   onPressed: () {
                     html.window.open(profileUrl, 'Engineer Profile');
                   },
-                  child: Text(
-                    "Learn more",
-                    style: TextStyle(
-                      color: kPrimaryColor,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 14.0,
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: 20.0,
+                    ),
+                    child: Text(
+                      "Learn more",
+                      style: TextStyle(
+                        color: kPrimaryColor,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 14.0,
+                      ),
                     ),
                   ),
                 ),
