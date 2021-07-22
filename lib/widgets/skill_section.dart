@@ -81,7 +81,7 @@ class SkillSection extends StatelessWidget {
                                       flex: 100 - skill.percentage,
                                       child: Divider(
                                         color: Colors.white,
-                                        height: 2.0,
+                                        thickness: 2.0,
                                       ),
                                     ),
                                     SizedBox(width: 10.0),
