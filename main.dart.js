@@ -54809,7 +54809,7 @@ $1:function(a){var s,r=null,q=this.b,p=$.KN()[q],o=t.D
 p=T.e4(T.hu(C.ae,r,r,r,T.hv(H.c([T.i6(p.a,1),T.i6(p.b,1)],o),C.R),!1,r,!1,1,1000,r,1000,!0),r,r)
 s=$.KN()[q]
 o=T.e4(T.hu(C.ae,r,r,r,T.hv(H.c([T.i6(s.a,1),T.i6(s.b,1)],o),C.R),!1,r,!1,1,760,r,760,!0),r,r)
-return M.aA(r,new L.fB(M.aA(r,$.KN()[q].a,r,new S.a4(0,a.F(t.w).f.a.a*0.8,0,1/0),r,r,r,r,r,1/0),o,p,r),r,new S.a4(0,1/0,this.a,1/0),r,r,r,r,r,r)},
+return M.aA(r,new L.fB(M.aA(r,$.KN()[q].a,r,new S.a4(0,a.F(t.w).f.a.a*0.9,0,1/0),r,r,r,r,r,1/0),o,p,r),r,new S.a4(0,1/0,this.a,1/0),r,r,r,r,r,r)},
 $S:112}
 F.a4t.prototype={
 $0:function(){C.a6.ja(window,"https://github.com/coolbeatz71","github")},
@@ -54831,7 +54831,7 @@ return P.a9($async$$0,r)},
 $S:80}
 Y.y9.prototype={
 H:function(a,b){var s=null,r=this.tB(b,1000),q=this.tB(b,760)
-return M.aA(s,new L.fB(this.tB(b,b.F(t.w).f.a.a*0.8),q,r,s),s,s,s,s,s,s,s,1/0)},
+return M.aA(s,new L.fB(this.tB(b,b.F(t.w).f.a.a*0.9),q,r,s),s,s,s,s,s,s,s,1/0)},
 tB:function(a,b){var s,r,q,p=null,o=L.bU("BETTER DESIGN,\nBETTER EXPERIENCES",p,p,A.b0(p,p,C.j,p,p,p,p,p,p,p,p,18,p,C.ag,p,1.8,!0,p,p,p,p,p,p,p),p,p),n=K.f9(8),m=t.D
 n=T.hv(H.c([o,D.h7(p,T.eh(B.A3(L.bU("DOWNLOAD CV",p,p,A.b0(p,p,C.j,p,p,p,p,p,p,p,p,13,p,C.ag,p,p,!0,p,p,p,p,p,p,p),p,p),C.a9,48,C.cs,new Y.MT(),new V.aq(16,0,16,0),new X.cp(n,C.m)),C.ao,p,p,p,!0),C.Y,!1,p,p,p,p,p,p,p,p,p,p,new Y.MU(),p,p,p,p,p)],m),C.dQ)
 o=T.b1(p,50,p)
@@ -54888,7 +54888,7 @@ $2:function(a,b){return T.b1(null,10,null)},
 $S:368}
 B.yT.prototype={
 H:function(a,b){var s=null,r=this.tO(1000),q=this.tO(760)
-return M.aA(s,new L.fB(this.tO(b.F(t.w).f.a.a*0.8),q,r,s),s,s,s,s,s,s,s,s)},
+return M.aA(s,new L.fB(this.tO(b.F(t.w).f.a.a*0.9),q,r,s),s,s,s,s,s,s,s,s)},
 tO:function(a){var s=null,r=t.D
 return M.aA(C.K,T.hu(C.ae,s,s,s,T.e5(H.c([L.bU("WORK EXPEPIENCE",s,s,A.b0(s,s,C.j,s,s,s,s,s,s,s,s,30,s,C.ag,s,1.3,!0,s,s,s,s,s,s,s),s,s),T.b1(s,5,s),T.Z4(H.c([M.aA(s,L.bU("A full stack all round developer that does all the job he needs to do at all times.",s,s,A.b0(s,s,C.j,s,s,s,s,s,s,s,s,s,s,s,s,1.5,!0,s,s,s,s,s,s,s),s,s),s,new S.a4(0,400,0,1/0),s,s,s,s,s,s)],r),0,0),T.b1(s,40,s),new A.eR(new B.Op(),s)],r),C.ct,C.R,C.a5),!1,s,!1,1,a,s,a,!0),s,s,s,s,s,s,s,s)}}
 B.Op.prototype={
@@ -54904,7 +54904,7 @@ $0:function(){C.a6.ja(window,"https://"+this.a.b,"url")},
 $S:0}
 N.zc.prototype={
 H:function(a,b){var s=null,r=N.a7B(1000,b),q=N.a7B(760,b)
-return M.aA(s,new L.fB(N.a7B(b.F(t.w).f.a.a*0.8,b),q,r,s),s,s,s,s,s,s,s,s)}}
+return M.aA(s,new L.fB(N.a7B(b.F(t.w).f.a.a*0.9,b),q,r,s),s,s,s,s,s,s,s,s)}}
 N.a3u.prototype={
 $2:function(a,b){var s=null,r=$.af_(),q=H.a3(r).i("ac<1,c9>")
 return T.e5(H.c([new T.ft(new V.aq(0,50,0,50),M.aA(s,T.Z4(P.au(new H.ac(r,new N.a3s(a,b),q),!0,q.i("aO.E")),20,20),s,s,new S.cP(s,s,new F.cs(new Y.cl(C.i3,1,C.N),C.m,C.m,C.m),s,s,s,C.O),s,s,s,new V.aq(0,50,0,0),s),s)],t.D),C.aK,C.R,C.a5)},
@@ -54945,7 +54945,7 @@ s.c.dU(s.d[this.b.b],C.b1,P.bD(0,400,0))},
 $S:0}
 A.zl.prototype={
 H:function(a,b){var s=this,r=null,q=s.c,p=s.d,o=s.Ez(1000,b,q,p)
-return M.aA(r,new L.fB(s.UA(b.F(t.w).f.a.a*0.8,b),s.Ez(760,b,q,p),o,r),r,r,r,62,r,new V.aq(0,0,0,18),new V.aq(0,18,0,18),r)},
+return M.aA(r,new L.fB(s.UA(b.F(t.w).f.a.a*0.9,b),s.Ez(760,b,q,p),o,r),r,r,r,62,r,new V.aq(0,0,0,18),new V.aq(0,18,0,18),r)},
 UA:function(a,b){var s=null
 return Q.a6V(!0,T.e4(T.hu(C.ae,s,s,s,T.hv(H.c([new A.qB(s),D.h7(s,L.zr(C.nD,C.j,28),C.Y,!1,s,s,s,s,s,s,s,s,s,s,new A.PE(),s,s,s,s,s)],t.D),C.dQ),!1,s,!1,1,a,s,a,!0),s,s),C.aA,!0)},
 Ez:function(a,b,c,d){var s=null
@@ -54961,7 +54961,7 @@ $2:function(a,b){return T.hv(H.c([new A.qB(null),new A.zm(this.a,this.b,null)],t
 $S:374}
 K.t2.prototype={
 H:function(a,b){var s=null,r=this.uv(1000),q=this.uv(760)
-return M.aA(s,new L.fB(this.uv(b.F(t.w).f.a.a*0.8),q,r,s),s,s,s,s,s,s,s,s)},
+return M.aA(s,new L.fB(this.uv(b.F(t.w).f.a.a*0.9),q,r,s),s,s,s,s,s,s,s,s)},
 uv:function(a){return T.e4(new A.eR(new K.T2(this,a),null),null,null)},
 gah:function(a){return this.e}}
 K.T2.prototype={
@@ -55001,7 +55001,7 @@ return M.aA(s,this.a.c[this.c],s,new S.a4(0,1/0,this.b,1/0),s,s,s,s,s,s)},
 $S:112}
 L.CG.prototype={
 H:function(a,b){var s=null,r=this.tf(1000),q=this.tf(760)
-return M.aA(s,new L.fB(this.tf(b.F(t.w).f.a.a*0.8),q,r,s),s,s,s,s,s,s,s,s)},
+return M.aA(s,new L.fB(this.tf(b.F(t.w).f.a.a*0.9),q,r,s),s,s,s,s,s,s,s,s)},
 tf:function(a){return T.e4(new A.eR(new L.Xw(a),null),null,null)}}
 L.Xw.prototype={
 $2:function(a,b){var s,r,q,p,o,n,m=null,l=this.a,k=t.w,j=a.F(k).f.a.a<800?C.l:C.k,i=a.F(k).f.a.a<800?0:2
@@ -55021,7 +55021,7 @@ return M.aA(s,T.hv(H.c([T.i6(M.aA(C.hi,L.bU(a.a,s,s,A.b0(s,s,s,s,s,s,s,s,s,s,s,s
 $S:376}
 N.CZ.prototype={
 H:function(a,b){var s=null,r=N.a7C(1000),q=N.a7C(760)
-return M.aA(s,new L.fB(N.a7C(b.F(t.w).f.a.a*0.8),q,r,s),s,s,s,s,s,s,new V.aq(0,50,0,50),s)}}
+return M.aA(s,new L.fB(N.a7C(b.F(t.w).f.a.a*0.9),q,r,s),s,s,s,s,s,s,new V.aq(0,50,0,50),s)}}
 N.a3v.prototype={
 $2:function(a,b){var s=H.a3($.adz).i("ac<1,c9>")
 return T.Z4(P.au(new H.ac($.adz,new N.a3t(a,b),s),!0,s.i("aO.E")),50,50)},
