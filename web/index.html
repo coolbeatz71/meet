@@ -51,8 +51,10 @@
 
     <script>
       window.onload = (event) => {
-        var element = document.getElementById("container");
-        element.parentNode.removeChild(element);
+        setTimeout(() => {
+          var element = document.querySelector(".container");
+          element.parentNode.removeChild(element);
+        }, 2000);
       };
 
       var serviceWorkerVersion = null;

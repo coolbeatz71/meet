@@ -21,7 +21,6 @@ class _BoxOffsetState extends State<BoxOffset> {
     WidgetsBinding.instance!.addPostFrameCallback((_) {
       final box = widgetKey.currentContext!.findRenderObject() as RenderBox;
       offset = box.localToGlobal(Offset.zero);
-      print(box.size.height);
       widget.getOffset(offset);
     });
   }

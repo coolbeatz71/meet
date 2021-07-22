@@ -98,7 +98,7 @@ List<CarouselItemModel> carouselItems = List.generate(
               height: 48.0,
               color: kPrimaryColor,
               onPressed: () async {
-                await launchMailto();
+                await openEmail();
               },
               padding: EdgeInsets.symmetric(
                 horizontal: 28.0,

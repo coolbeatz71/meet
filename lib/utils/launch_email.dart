@@ -1,8 +1,13 @@
 import 'package:url_launcher/url_launcher.dart';
+import 'package:mailto/mailto.dart';
 
-launchMailto() async {
+openEmail() async {
   try {
-    await launch('mailto:sigmacool@gmail.com');
+    final mailtoLink = Mailto(
+      to: ['sigmacool@gmail.com'],
+      subject: 'Hire Mutombo Jean-vincent as a ...',
+    );
+    await launch('$mailtoLink');
   } catch (e) {
     print(e.toString());
   }
