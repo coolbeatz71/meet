@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
-
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="meet" />
-    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-    <title>Meet | Mutombo Jean-vincent</title>
-    <link rel="manifest" href="manifest.json" />
-    <style>
+    <style type="text/css">
       .container {
         background: #1a263b;
         position: absolute;
@@ -43,6 +30,19 @@
         }
       }
     </style>
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="meet" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <title>Meet | Mutombo Jean-vincent</title>
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <div class="container">
@@ -50,13 +50,6 @@
     </div>
 
     <script>
-      window.onload = (event) => {
-        setTimeout(() => {
-          var element = document.querySelector(".container");
-          element.parentNode.removeChild(element);
-        }, 2000);
-      };
-
       var serviceWorkerVersion = null;
       var scriptLoaded = false;
       function loadMainDartJs() {
@@ -71,11 +64,12 @@
       }
 
       if ("serviceWorker" in navigator) {
-        // Service workers are supported. Use them.
         window.addEventListener("load", function () {
-          // Wait for registration to finish before dropping the <script> tag.
-          // Otherwise, the browser will load the script multiple times,
-          // potentially different versions.
+          setTimeout(() => {
+            var element = document.querySelector(".container");
+            if (element) element.remove();
+          }, 2000);
+
           var serviceWorkerUrl =
             "flutter_service_worker.js?v=" + serviceWorkerVersion;
           navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
@@ -88,24 +82,17 @@
               });
             }
             if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
               waitForActivation(reg.installing ?? reg.waiting);
             } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
               console.log("New service worker available.");
               reg.update();
               waitForActivation(reg.installing);
             } else {
-              // Existing service worker is still good.
               console.log("Loading app from service worker.");
               loadMainDartJs();
             }
           });
 
-          // If service worker doesn't succeed in a reasonable amount of time,
-          // fallback to plaint <script> tag.
           setTimeout(() => {
             if (!scriptLoaded) {
               console.warn(
@@ -115,10 +102,7 @@
             }
           }, 4000);
         });
-      } else {
-        // Service workers not supported. Just drop the <script> tag.
-        loadMainDartJs();
-      }
+      } else loadMainDartJs();
     </script>
   </body>
 </html>

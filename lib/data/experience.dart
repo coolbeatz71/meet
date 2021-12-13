@@ -2,14 +2,24 @@ import 'package:meet/models/experience.dart';
 
 final List<Experience> experienceList = [
   Experience(
-    description: "Frontend Developer -- DAAS LTD - Rwanda",
+    description: "Senior Frontend Engineer -- DAAS LTD - Rwanda",
     linkName: "www.codeofafrica.com",
     period: "June 2021 - PRESENT",
   ),
   Experience(
-    description: "Frontend Developer -- EXUUS LTD - Rwanda",
+    description: "Frontend Engineer -- ALFATIER GmbH - Germany",
+    linkName: "www.alfatier.io",
+    period: "June 2021 - PRESENT",
+  ),
+  Experience(
+    description: "Frontend Engineer -- RECONSTRUCTION - USA",
+    linkName: "www.reconstruction.us",
+    period: "June 2021 - OCTOBER 2021",
+  ),
+  Experience(
+    description: "Frontend Engineer -- EXUUS LTD - Rwanda",
     linkName: "www.exuus.com",
-    period: "June 2020 - PRESENT",
+    period: "June 2020 - August 2021",
   ),
   Experience(
     description: "Full Stack Engineer -- AKORION COMPANY LTD - Uganda",
