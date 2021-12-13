@@ -30,11 +30,6 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    final loader = document.getElementsByClassName('container');
-    if (loader.isNotEmpty) {
-      loader.first.remove();
-    }
-
     scrollController = ScrollController();
     anchors = List.generate(6, (index) => index.toDouble());
     super.initState();

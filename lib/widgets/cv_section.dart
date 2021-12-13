@@ -57,7 +57,7 @@ class CvSection extends StatelessWidget {
                       html.window.open(cvUrl, 'Download CV');
                     },
                     padding: EdgeInsets.symmetric(
-                      horizontal: 18.0,
+                      horizontal: 20.0,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),

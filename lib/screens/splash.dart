@@ -44,7 +44,7 @@ class SplashScreen extends StatelessWidget {
       splashTransition: SplashTransition.fadeTransition,
       backgroundColor: kBackgroundColor.withOpacity(0.8),
       animationDuration: Duration(milliseconds: 500),
-      duration: 500,
+      duration: 800,
     );
   }
 }
