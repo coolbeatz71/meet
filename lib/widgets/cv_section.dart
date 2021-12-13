@@ -8,7 +8,7 @@ import 'package:meet/utils/screen_helper.dart';
 import 'dart:html' as html;
 
 String cvUrl =
-    "https://drive.google.com/file/d/1uYtH7Fdis7iYDNkfwlA3bpg0reiPXKtu/view?usp=sharing";
+    "https://drive.google.com/file/d/1eSK8WIKek23pNuFgN31dSxTVSTcf6ggU/view?usp=sharing";
 String profileUrl =
     "https://docs.google.com/presentation/d/15sNQrBbKHHPSCdofciya0XGESFcn3ONBk8V1qfaWB0o/edit#slide=id.p";
 
@@ -57,7 +57,7 @@ class CvSection extends StatelessWidget {
                       html.window.open(cvUrl, 'Download CV');
                     },
                     padding: EdgeInsets.symmetric(
-                      horizontal: 16.0,
+                      horizontal: 18.0,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
