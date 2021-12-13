@@ -43,14 +43,28 @@
 
     <title>Meet | Mutombo Jean-vincent</title>
     <link rel="manifest" href="manifest.json" />
-  </head>
-  <body>
+    <link rel="stylesheet" type="text/css" href="splash/style.css" />
+  <link rel="stylesheet" type="text/css" href="splash/style.css">
+</head>
+  <body
+    style="
+      position: fixed;
+      inset: 0px;
+      overflow: hidden;
+      padding: 0px;
+      margin: 0px;
+      user-select: none;
+      touch-action: none;
+      font: 14px sans-serif;
+      color: red;
+    "
+  >
     <div class="container">
       <div class="loader"></div>
     </div>
 
     <script>
-      var serviceWorkerVersion = '2209787060';
+      var serviceWorkerVersion = '3682365953';
       var scriptLoaded = false;
       function loadMainDartJs() {
         if (scriptLoaded) {
