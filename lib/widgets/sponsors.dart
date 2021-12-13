@@ -28,30 +28,36 @@ class Sponsors extends StatelessWidget {
 
 Widget _buildUi(double width) {
   return Center(
-    child: ResponsiveWrapper(
-      minWidth: width,
-      maxWidth: width,
-      defaultScale: false,
-      child: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          return Wrap(
-            runSpacing: 50.0,
-            spacing: 50.0,
-            children: sponsorsLogo
-                .map(
-                  (logo) => Container(
-                    height: 40.0,
-                    child: Image.asset(logo),
-                    constraints: BoxConstraints(
-                      maxWidth: ScreenHelper.isMobile(context)
-                          ? constraints.maxWidth / 3.0 - 50.0
-                          : constraints.maxWidth / 5.0 - 50.0,
+    child: Container(
+      padding: EdgeInsets.all(24.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+      ),
+      child: ResponsiveWrapper(
+        minWidth: width,
+        maxWidth: width,
+        defaultScale: false,
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            return Wrap(
+              runSpacing: 50.0,
+              spacing: 50.0,
+              children: sponsorsLogo
+                  .map(
+                    (logo) => Container(
+                      height: 40.0,
+                      child: Image.asset(logo),
+                      constraints: BoxConstraints(
+                        maxWidth: ScreenHelper.isMobile(context)
+                            ? constraints.maxWidth / 3.0 - 50.0
+                            : constraints.maxWidth / 5.0 - 50.0,
+                      ),
                     ),
-                  ),
-                )
-                .toList(),
-          );
-        },
+                  )
+                  .toList(),
+            );
+          },
+        ),
       ),
     ),
   );
