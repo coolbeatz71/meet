@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:meet/models/header_item.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:meet/models/carousel_item_model.dart';
 import 'package:meet/utils/constants.dart';
 import 'package:meet/utils/launch_email.dart';

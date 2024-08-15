@@ -1,4 +1,4 @@
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:meet/models/design_process.dart';
 
 final List<DesignProcess> designProcesses = [
